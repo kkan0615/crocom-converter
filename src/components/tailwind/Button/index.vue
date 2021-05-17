@@ -72,7 +72,6 @@ export default defineComponent({
         ['shadow']: props.shadow,
         ['px-2']: !props.icon,
         ['py-1']: !props.icon,
-        ['ripple']: !props.disabled,
         ['opacity-50']: props.disabled
       }
     })

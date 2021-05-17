@@ -1,10 +1,23 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import GeneralLayout from '@/layouts/General/index.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import('@/views/Home/index.vue')
+    name: 'GeneralLayout',
+    component: GeneralLayout,
+    children: [
+      {
+        path: 'home',
+        name: 'Home',
+        component: () => import('@/views/Home/index.vue'),
+      },
+      {
+        path: 'playground',
+        name: 'Playground',
+        component: () => import('@/views/Playground/index.vue'),
+      },
+    ]
   },
 ]
 
